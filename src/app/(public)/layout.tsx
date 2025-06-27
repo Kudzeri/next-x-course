@@ -1,31 +1,13 @@
-import type { Metadata } from "next";
-import { Geist } from "next/font/google";
-import "@/app/globals.css";
 import { Header } from "@/components/Header";
+import type { PropsWithChildren } from "react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-export const metadata: Metadata = {
-  title: {
-    default: "X - Twitter Clone",
-    template: "%s | X",
-  },
-  description: "Frontend project for X - Twitter clone",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Layout({ children }: PropsWithChildren<unknown>) {
   return (
-    <html lang="en">
+    <div className="min-h-screen">
       <Header />
-      <body className={`${geistSans.className} antialiased`}>{children}</body>
-    </html>
+      <div className="flex justify-center px-4 py-8">
+        <div className="w-full max-w-xl ">{children}</div>
+      </div>
+    </div>
   );
 }
