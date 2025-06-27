@@ -2,6 +2,7 @@
 import { MENU_ITEMS } from "@/data/menu.data";
 import { usePathname } from "next/navigation";
 import { MenuItem } from "./MenuItem";
+import { match } from "path-to-regexp";
 
 export function Menu() {
   const pathname = usePathname();
@@ -12,7 +13,7 @@ export function Menu() {
         <MenuItem
           key={item.name}
           menuItem={item}
-          isActive={pathname === item.href}
+          isActive={!!match(item.href)(pathname)}
         />
       ))}
     </nav>
