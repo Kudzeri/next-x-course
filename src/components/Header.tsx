@@ -1,6 +1,7 @@
 import { PAGES } from "@/config/pages.config";
 import Image from "next/image";
 import Link from "next/link";
+import { HeaderLink } from "./HeaderLink";
 
 export function Header() {
   return (
@@ -15,15 +16,9 @@ export function Header() {
         />
       </Link>
       <nav className="flex gap-6 text-sm text-white/80">
-        <Link href={PAGES.HOME.href} className="hover:text-white">
-          Home
-        </Link>
-        <Link href="/" className="hover:text-white">
-          Explore
-        </Link>
-        <Link href="/" className="hover:text-white">
-          Profile
-        </Link>
+        <HeaderLink href={PAGES.HOME.href}>Profile</HeaderLink>
+        <HeaderLink href={PAGES.EXPLORE.href}>Explore</HeaderLink>
+        <HeaderLink href={PAGES.PROFILE_FAKE.href}>Profile</HeaderLink>
       </nav>
     </header>
   );
