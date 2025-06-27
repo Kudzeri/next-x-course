@@ -1,5 +1,7 @@
 "use client";
 
+//примитивная реализация ссылки с подсветкой активного состояния
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
