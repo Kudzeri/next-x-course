@@ -1,7 +1,6 @@
-import { PAGES } from "@/config/pages.config";
 import Image from "next/image";
 import Link from "next/link";
-import { HeaderLink } from "./HeaderLink";
+import { Menu } from "./Menu";
 
 export function Header() {
   return (
@@ -15,11 +14,8 @@ export function Header() {
           priority
         />
       </Link>
-      <nav className="flex gap-6 text-sm text-white/80">
-        <HeaderLink href={PAGES.HOME.href}>Home</HeaderLink>
-        <HeaderLink href={PAGES.EXPLORE.href}>Explore</HeaderLink>
-        <HeaderLink href={PAGES.PROFILE_FAKE.href}>Profile</HeaderLink>
-      </nav>
+
+      <Menu />
     </header>
   );
 }
