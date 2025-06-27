@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# X/Twitter Clone
 
-## Getting Started
+Современная имплементация социальной сети в стиле X (Twitter), созданная с использованием [Next.js](https://nextjs.org) 15, TypeScript и Tailwind CSS.
 
-First, run the development server:
+## 🚀 Особенности
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- ✨ **Современный стек**: Next.js 15, React 19, TypeScript 5
+- 🎨 **Стилизация**: Tailwind CSS 4 для современного дизайна
+- 📱 **Отзывчивый дизайн**: Адаптивная верстка для всех устройств
+- 🔗 **Маршрутизация**: App Router с группированными маршрутами
+- 🖼️ **Оптимизация изображений**: Next.js Image component
+- 🌙 **Темная тема**: Элегантная темная тема по умолчанию
+
+## 📁 Структура проекта
+
+```
+src/
+├── app/                    # App Router (Next.js 13+)
+│   ├── (public)/          # Публичные страницы
+│   │   ├── (home)/        # Главная страница
+│   │   └── u/[username]/  # Профили пользователей
+│   ├── layout.tsx         # Корневой layout
+│   └── globals.css        # Глобальные стили
+├── components/            # Переиспользуемые компоненты
+│   └── Header.tsx         # Навигационный header
+├── config/                # Конфигурация
+│   └── pages.config.ts    # Конфигурация страниц
+├── data/                  # Данные приложения
+│   └── tweets.data.ts     # Моковые данные твитов
+└── shared/
+    └── types/             # TypeScript типы
+        └── tweet.interface.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Технологии
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: Next.js 15.3.4
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 4
+- **React**: React 19
+- **Linting**: ESLint 9 с Next.js конфигурацией
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Начало работы
 
-## Learn More
+1. **Установка зависимостей**:
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Запуск сервера разработки**:
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Откройте в браузере**: [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📜 Доступные скрипты
 
-## Deploy on Vercel
+- `npm run dev` - Запуск в режиме разработки
+- `npm run build` - Сборка для production
+- `npm run start` - Запуск production сервера
+- `npm run lint` - Проверка кода ESLint
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🏗️ Функциональность
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Главная страница
+- Лента твитов с данными из моков
+- Отображение авторов и текста твитов
+- Ссылки на профили пользователей
+
+### Профили пользователей
+- Динамические маршруты `/u/[username]`
+- Страницы профилей (в разработке)
+
+### Компоненты
+- `Tweet` - Отображение отдельного твита
+- `Header` - Навигационная панель с логотипом X
+
+## 🎨 Дизайн
+
+Приложение использует современную темную тему с:
+- Черный фон (`bg-black`)
+- Белый текст с прозрачностью
+- Границы с низкой прозрачностью (`border-white/10`)
+- Логотип X в качестве брендинга
+
+## 🔧 Разработка
+
+Проект использует современные практики разработки:
+- Строгая типизация с TypeScript
+- Компонентная архитектура React
+- Группированные маршруты Next.js
+- Конфигурационные файлы для масштабируемости
+
+## 📝 Следующие шаги
+
+- [ ] Реализация полнофункциональных профилей
+- [ ] Добавление интерактивности (лайки, ретвиты)
+- [ ] Система аутентификации
+- [ ] API для динамических данных
+- [ ] Возможность создания твитов
+
+## 🚀 Развертывание
+
+Рекомендуется развертывать на [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) для оптимальной производительности Next.js приложений.
