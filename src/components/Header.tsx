@@ -16,7 +16,7 @@ export function Header() {
         />
       </Link>
       <nav className="flex gap-6 text-sm text-white/80">
-        <HeaderLink href={PAGES.HOME.href}>Profile</HeaderLink>
+        <HeaderLink href={PAGES.HOME.href}>Home</HeaderLink>
         <HeaderLink href={PAGES.EXPLORE.href}>Explore</HeaderLink>
         <HeaderLink href={PAGES.PROFILE_FAKE.href}>Profile</HeaderLink>
       </nav>
