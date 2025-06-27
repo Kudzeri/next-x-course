@@ -1,3 +1,4 @@
+import { PAGES } from "@/config/pages.config";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,7 +15,7 @@ export function Header() {
         />
       </Link>
       <nav className="flex gap-6 text-sm text-white/80">
-        <Link href="/" className="hover:text-white">
+        <Link href={PAGES.HOME.href} className="hover:text-white">
           Home
         </Link>
         <Link href="/" className="hover:text-white">
