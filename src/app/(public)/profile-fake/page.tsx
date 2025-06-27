@@ -1,5 +1,6 @@
 import { PAGES } from "@/config/pages.config";
 import type { Metadata } from "next";
+import { ProfileFake } from "./ProfileFake";
 
 export const metadata: Metadata = {
   title: PAGES.PROFILE_FAKE.title,
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 function FakeProfile() {
-  return <div>FakeProfile</div>;
+  return <ProfileFake />;
 }
 
 export default FakeProfile;
