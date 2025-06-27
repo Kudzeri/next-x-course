@@ -9,4 +9,14 @@ export const PAGES = {
     title: "Home",
     description: "Home page of the X - Twitter clone",
   },
+  EXPLORE: {
+    href: "/explore",
+    title: "Explore",
+    description: "Explore page to discover new content and users",
+  },
+  PROFILE_FAKE: {
+    href: "/profile-fake",
+    title: "Profile - fake",
+    description: "User profile page for fake",
+  },
 };
