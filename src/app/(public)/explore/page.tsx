@@ -1,4 +1,6 @@
 import { PAGES } from "@/config/pages.config";
+import { ExplorePage } from "./Explore";
+import { Suspense } from "react";
 
 export const metadata = {
   title: PAGES.EXPLORE.title,
@@ -6,5 +8,11 @@ export const metadata = {
 };
 
 export default function Explore() {
-  return <div>Explore</div>;
+  return (
+    <>
+      <Suspense fallback={<div className="text-center">Loading...</div>}>
+        <ExplorePage />
+      </Suspense>
+    </>
+  );
 }
