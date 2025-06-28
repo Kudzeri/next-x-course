@@ -15,3 +15,13 @@ export const fetchProductsSSR = async (): Promise<Product[]> => {
   const data = await res.json();
   return data.products;
 };
+
+export const fetchProductsISR = async (): Promise<Product[]> => {
+  const res = await fetch(`${API_URL}products?limit=10`, {
+    next: {
+      revalidate: 300,
+    },
+  });
+  const data = await res.json();
+  return data.products;
+};
