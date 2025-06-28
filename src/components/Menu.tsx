@@ -6,6 +6,7 @@ import { match } from "path-to-regexp";
 
 export function Menu() {
   const pathname = usePathname();
+  // const segment = useSelectedLayoutSegment(); //корневая часть пути
 
   return (
     <nav className="flex gap-6">
