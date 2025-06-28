@@ -1,4 +1,5 @@
 "use client";
+//для SSR
 
 export default function Error({ error }: { error: Error }) {
   return (
