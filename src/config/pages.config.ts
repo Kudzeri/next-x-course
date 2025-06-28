@@ -21,7 +21,7 @@ export const PAGES = {
   },
   SHOP: {
     href: "/shop",
-    title: "Shop",
+    title: "Shop - SSR",
     description: "Shop page to browse products and make purchases",
   },
   SSG: {
