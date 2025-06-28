@@ -1,3 +1,3 @@
-export function page() {
-    return <div>page</div>
+export default function ShopISRPage() {
+    return <div>ISR</div>
 }
