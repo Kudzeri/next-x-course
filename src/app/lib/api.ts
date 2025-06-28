@@ -9,7 +9,9 @@ export const fetchProductsSSG = async (): Promise<Product[]> => {
 
 
 export const fetchProductsSSR = async (): Promise<Product[]> => {
-  const res = await fetch(`${API_URL}products?limit=10`);
+  const res = await fetch(`${API_URL}products?limit=10`, {
+    cache: "no-store",
+  });
   const data = await res.json();
   return data.products;
 };
