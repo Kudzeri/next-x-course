@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
 import { ProfilePage } from "./Profile";
 
-export const metadata: Metadata = {
-  title: "Profile",
-  description: "User profile page",
+type Params = {
+  username: string;
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<Params>;
+}): Metadata {
+  return {
+    title: `@${(await params).username}`,
+    description: `User profile page for ${(await params).username}`,
+  };
+}
 
 export default function Profile() {
   return <ProfilePage />;
