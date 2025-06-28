@@ -14,7 +14,7 @@ export function ProductCard({ images, title, price }: ProductCardProps) {
         height={40}
         src={images[0]}
         alt={title}
-        className="object-contain mb-3  rounded"
+        className="object-contain mb-3  rounded mx-auto"
       />
       <h2 className="text-sm text-black dark:text-white font-medium line-clamp-2 mb-1">
         {title}
