@@ -14,4 +14,8 @@ export const MENU_ITEMS: IMenuItem[] = [
     href: PAGES.PROFILE_FAKE.href,
     name: "Profile",
   },
+  {
+    href: PAGES.SHOP.href,
+    name: "Shop",
+  }
 ];

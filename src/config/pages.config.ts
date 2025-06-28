@@ -19,4 +19,19 @@ export const PAGES = {
     title: "Profile - fake",
     description: "User profile page for fake",
   },
+  SHOP: {
+    href: "/shop",
+    title: "Shop",
+    description: "Shop page to browse products and make purchases",
+  },
+  SSG: {
+    href: "/shop/ssg",
+    title: "Shop - SSG",
+    description: "Shop page with static site generation",
+  },
+  ISR: {
+    href: "/shop/isr",
+    title: "Shop - ISR",
+    description: "Shop page with incremental static regeneration",
+  },
 };
